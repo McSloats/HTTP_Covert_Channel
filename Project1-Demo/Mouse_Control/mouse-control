@@ -1,0 +1,60 @@
+#! /bin/bash
+# sudo apt-get install xdotool
+# move the mouse  x    y
+
+FILE=$1
+#SLEEP=0.015
+while read -n1 c; do
+    #0
+    if [ $c == "0" ]; then
+       	xdotool mousemove 56 196
+    #1
+    elif [ $c == "1" ]; then
+        xdotool mousemove 78 196
+    #2
+    elif [ $c == "2" ]; then
+        xdotool mousemove 100 196
+    #3
+    elif [ $c == "3" ]; then
+        xdotool mousemove 122 196
+    #4
+    elif [ $c == "4" ]; then
+        xdotool mousemove 56 218
+    #5
+    elif [ $c == "5" ]; then
+        xdotool mousemove 78 218
+    #6
+    elif [ $c == "6" ]; then
+        xdotool mousemove 100 218
+    #7
+    elif [ $c == "7" ]; then
+        xdotool mousemove 122 218
+    #8
+    elif [ $c == "8" ]; then
+        xdotool mousemove 56 240
+    #9
+    elif [ $c == "9" ]; then
+        xdotool mousemove 78 240
+    #A
+    elif [ $c == "a" ]; then
+        xdotool mousemove 100 240
+    #B
+    elif [ $c == "b" ]; then
+        xdotool mousemove 122 240
+    #C
+    elif [ $c == "c" ]; then
+        xdotool mousemove 56 262
+    #D
+    elif [ $c == "d" ]; then
+        xdotool mousemove 78 262
+    #E
+    elif [ $c == "e" ]; then
+        xdotool mousemove 100 262
+    #F
+    elif [ $c == "f" ]; then
+        xdotool mousemove 122 262
+    else
+        echo "couldnotfindletter"
+    fi
+    #sleep $SLEEP
+done < $FILE
