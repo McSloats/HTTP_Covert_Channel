@@ -1,0 +1,109 @@
+import pyautogui
+import binascii
+import sys
+import time
+
+def preamble():
+	#HB
+	pyautogui.moveTo(78, 218, duration=0.2)
+	#0
+	pyautogui.moveTo(78, 152, duration=0.2)
+	#1
+	pyautogui.moveTo(100, 152, duration=0.2)
+	#2
+	pyautogui.moveTo(122, 174, duration=0.2)
+	#3
+	pyautogui.moveTo(144, 196, duration=0.2)
+	#4
+	pyautogui.moveTo(144, 218, duration=0.2)
+	#5
+	pyautogui.moveTo(144, 240, duration=0.2)
+	#6
+	pyautogui.moveTo(122, 262, duration=0.2)
+	#7
+	pyautogui.moveTo(100, 284, duration=0.2)
+	#8
+	pyautogui.moveTo(78, 284, duration=0.2)
+	#9
+	pyautogui.moveTo(56, 284, duration=0.2)
+	#A
+	pyautogui.moveTo(34, 264, duration=0.2)
+	#B
+	pyautogui.moveTo(12, 240, duration=0.2)
+	#C
+	pyautogui.moveTo(12, 218, duration=0.2)
+	#D
+	pyautogui.moveTo(12, 196, duration=0.2)
+	#E
+	pyautogui.moveTo(34, 174, duration=0.2)
+	#F
+	pyautogui.moveTo(56, 152, duration=0.2)
+	#HB
+	pyautogui.moveTo(78, 218, duration=0.2)
+
+def transmit_msg():
+	with open(sys.argv[1], 'rb') as f:
+		message = f.read()
+	message = str(binascii.hexlify(message), 'utf-8')
+	execution = time.time()
+	for x in message:
+	#HB
+	#pyautogui.moveTo(78, 218)
+		#0
+		if x == "0":
+			pyautogui.moveTo(56, 196)
+		#1
+		elif x == "1":
+			pyautogui.moveTo(78, 196)
+		#2
+		elif x == "2":
+			pyautogui.moveTo(100, 196)
+		#3
+		elif x == "3":
+			pyautogui.moveTo(122, 196)
+		#4
+		elif x == "4":
+			pyautogui.moveTo(56, 218)
+		#5
+		elif x == "5":
+			pyautogui.moveTo(78, 218)
+		#6
+		elif x == "6":
+			pyautogui.moveTo(100, 218)
+		#7
+		elif x == "7":
+			pyautogui.moveTo(122, 218)
+		#8
+		elif x == "8":
+			pyautogui.moveTo(56, 240)
+		#9
+		elif x == "9":
+			pyautogui.moveTo(78, 240)
+		#A
+		elif x == "a":
+			pyautogui.moveTo(100, 240)
+		#B
+		elif x == "b":
+			pyautogui.moveTo(122, 240)
+		#C
+		elif x == "c":
+			pyautogui.moveTo(56, 262)
+		#D
+		elif x == "d":
+			pyautogui.moveTo(78, 262)
+		#E
+		elif x == "e":
+			pyautogui.moveTo(100, 262)
+		#F
+		elif x == "f":
+			pyautogui.moveTo(122, 262)
+		else:
+			pyautogui.moveTo(78, 218)
+
+	execution = (time.time() - execution)/len(str(message))
+	
+	print(execution)
+#Preamble
+#preamble()
+
+transmit_msg()

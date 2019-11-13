@@ -3,58 +3,58 @@
 # move the mouse  x    y
 
 FILE=$1
-#SLEEP=0.015
+SLEEP=0.1
 while read -n1 c; do
     #0
     if [ $c == "0" ]; then
-       	xdotool mousemove 56 196
+       	xdotool mousemove 11 152
     #1
     elif [ $c == "1" ]; then
-        xdotool mousemove 78 196
+        xdotool mousemove 77 218
     #2
     elif [ $c == "2" ]; then
-        xdotool mousemove 100 196
+        xdotool mousemove 33 152
     #3
     elif [ $c == "3" ]; then
-        xdotool mousemove 122 196
+        xdotool mousemove 55 218
     #4
     elif [ $c == "4" ]; then
-        xdotool mousemove 56 218
+        xdotool mousemove 55 152
     #5
     elif [ $c == "5" ]; then
-        xdotool mousemove 78 218
+        xdotool mousemove 33 218
     #6
     elif [ $c == "6" ]; then
-        xdotool mousemove 100 218
+        xdotool mousemove 77 152
     #7
     elif [ $c == "7" ]; then
-        xdotool mousemove 122 218
+        xdotool mousemove 11 218
     #8
     elif [ $c == "8" ]; then
-        xdotool mousemove 56 240
+        xdotool mousemove 77 174
     #9
     elif [ $c == "9" ]; then
-        xdotool mousemove 78 240
+        xdotool mousemove 11 196
     #A
     elif [ $c == "a" ]; then
-        xdotool mousemove 100 240
+        xdotool mousemove 55 174
     #B
     elif [ $c == "b" ]; then
-        xdotool mousemove 122 240
+        xdotool mousemove 33 196
     #C
     elif [ $c == "c" ]; then
-        xdotool mousemove 56 262
+        xdotool mousemove 11 174
     #D
     elif [ $c == "d" ]; then
-        xdotool mousemove 78 262
+        xdotool mousemove 77 196
     #E
     elif [ $c == "e" ]; then
-        xdotool mousemove 100 262
+        xdotool mousemove 33 174
     #F
     elif [ $c == "f" ]; then
-        xdotool mousemove 122 262
+        xdotool mousemove 55 196
     else
         echo "couldnotfindletter"
     fi
-    #sleep $SLEEP
+    sleep $SLEEP
 done < $FILE
