@@ -3,7 +3,7 @@
 # move the mouse  x    y
 
 FILE=$1
-SLEEP=0.1
+SLEEP=0.0000001
 while read -n1 c; do
     #0
     if [ $c == "0" ]; then
@@ -26,6 +26,7 @@ while read -n1 c; do
     #6
     elif [ $c == "6" ]; then
         xdotool mousemove 77 152
+        xdotool mousemove 72 148
     #7
     elif [ $c == "7" ]; then
         xdotool mousemove 11 218
@@ -56,5 +57,7 @@ while read -n1 c; do
     else
         echo "couldnotfindletter"
     fi
+    sleep $SLEEP
+    xdotool mousemove 99 240
     sleep $SLEEP
 done < $FILE
