@@ -9,194 +9,70 @@
 	<meta charset="utf-8" /> 
 	<style>   
 	
-	
-		#c0x0{
-			width:20px;
-			height:20px;
-			top: 0px;
-		}
-		p{
-			margin-top: 0em;
-  			margin-bottom: 0em;
-
-		}
-		#c0x0:hover{
-			
-			background:url("c0x0.png?cache=none")
-			
-			}
-
-		#c0x1{
-			width:22px;
-			height:22px;
-			top: 0px;			
-		}
-		#c0x1:hover{
-			background:url("c0x1.png"); 
-		} 
-
-		#c0x2{
-			width:22px;
-			height:22px;
-			top: 0px;			
-		}
-		#c0x2:hover{
-			
-			background:url("c0x2.png")url(event.timestamp); 
-		}	
-		#c0x3{
-			width:22px;
-			height:22px;
-			top: 0px;
-		}
-		#c0x3:hover{
-			background:url("c0x3.png?cache=none"); 
-		}	
-		
-	 
 	</style> 
 
 <script> 
-	function changeTime00(){
+	var counter=0;
+	function changeTime(id, value){
 		var newImage = new Image(); 
-		newImage.src = "c0?" + new Date().getTime();
-		document.getElementById("c0x0").src=newImage.src; 
+		newImage.src = value+"?" + counter;
+		document.getElementById(id).src=newImage.src; 
+		counter++; 
 	}
-
-	function changeTime01(){
-		var newImage = new Image(); 
-		newImage.src = "c2?" + new Date().getTime();
-		document.getElementById("c0x1").src=newImage.src; 
-	}
-	function changeTime02(){
-    var newImage=new Image();
-    newImage.src = "c4?" + new Date().getTime();
-    document.getElementById("c0x2").src=newImage.src; 
-	}
-	function changeTime03(){
-		var newImage=new Image();
-		newImage.src = "c6?" + new Date().getTime();
-		document.getElementById("c0x3").src=newImage.src; 
-	}
-
-	function changeTime10(){
-		var newImage=new Image();
-		newImage.src = "cC?" + new Date().getTime();
-		document.getElementById("c").src=newImage.src; 
-	}
-	function changeTime11(){
-		var newImage=new Image();
-		newImage.src = "cE?" + new Date().getTime();
-		document.getElementById("c1x1").src=newImage.src; 
-	}
-	function changeTime12(){
-		var newImage=new Image();
-		newImage.src = "cA?" + new Date().getTime();
-		document.getElementById("c1x2").src=newImage.src; 
-	}
-	function changeTime13(){
-		var newImage=new Image();
-		newImage.src = "c8?" + new Date().getTime();
-		document.getElementById("c1x3").src=newImage.src; 
-	}
-
-
-	function changeTime20(){
-		var newImage=new Image();
-		newImage.src = "c9?" + new Date().getTime();
-		document.getElementById("c2x0").src=newImage.src; 
-	}
-	function changeTime21(){
-		var newImage=new Image();
-		newImage.src = "cB?" + new Date().getTime();
-		document.getElementById("c2x1").src=newImage.src; 
-	}
-	function changeTime22(){
-		var newImage=new Image();
-		newImage.src = "cF?" + new Date().getTime();
-		document.getElementById("c2x2").src=newImage.src; 
-	}
-	function changeTime23(){
-		var newImage=new Image();
-		newImage.src = "cD?" + new Date().getTime();
-		document.getElementById("c2x3").src=newImage.src; 
-	}
-	function changeTime30(){
-		var newImage=new Image();
-		newImage.src = "c7?" + new Date().getTime();
-		document.getElementById("c3x0").src=newImage.src; 
-	}
-	function changeTime31(){
-		var newImage=new Image();
-		newImage.src = "c5?" + new Date().getTime();
-		document.getElementById("c3x1").src=newImage.src; 
-	}
-	function changeTime32(){
-		var newImage=new Image();
-		newImage.src = "c3?" + new Date().getTime();
-		document.getElementById("c3x2").src=newImage.src; 
-	}
-	function changeTime33(){
-		var newImage=new Image();
-		newImage.src = "c1?" + new Date().getTime();
-		document.getElementById("c3x3").src=newImage.src; 
-	}
-	
-	
 </script>
 
 </head>
-<div onmouseover="changeTime00()" style="position: fixed; top:0px ;left: 0px;width: 22px;height:22px;border:1px solid #666" > 
+<div onmouseover="changeTime('c0x0','c0')" style="position: fixed; top:0px ;left: 0px;width: 22px;height:22px;border:1px solid #666" > 
 		<p id="c0x0"></p>
 </div>
-<div onmouseover="changeTime01()" style="position: fixed; top:0px; left:22px;width: 22px;height:22px;border:1px solid #666"> 
+<div onmouseover="changeTime('c0x1','c2')" style="position: fixed; top:0px; left:22px;width: 22px;height:22px;border:1px solid #666"> 
 		<p id="c0x1"></p>
 </div> 
 
-<div onmouseover="changeTime02()"style="position:fixed;top:0px; left:44px; width: 22px; height:22px;border:1px solid #666"> 
+<div onmouseover="changeTime('c0x2','c4')" style="position:fixed;top:0px; left:44px; width: 22px; height:22px;border:1px solid #666"> 
 		<p id="c0x2"> </p>
 </div>
 
-<div onmouseover="changeTime03()"style="position: fixed;top:0; left:66px; width: 22px;height:22px;border:1px solid #666"> 
+<div onmouseover="changeTime('c0x3','c6')" style="position: fixed;top:0; left:66px; width: 22px;height:22px;border:1px solid #666"> 
 	<p id="c0x3"> </p>
 </div>
 
-<div onmouseover="changeTime10()" style="position: fixed; top:22px ;left: 0px;width: 22px;height:22px;border:1px solid #666" > 
+<div onmouseover="changeTime('c1x0','cC')" style="position: fixed; top:22px ;left: 0px;width: 22px;height:22px;border:1px solid #666" > 
     <p id="c1x0"></p> 
 </div>
-<div onmouseover="changeTime11()" style="position: fixed; top:22px ;left: 22px;width: 22px;height:22px;border:1px solid #666" > 
+<div onmouseover="changeTime('c1x1','cE')" style="position: fixed; top:22px ;left: 22px;width: 22px;height:22px;border:1px solid #666" > 
     <p id="c1x1"></p> 
 </div>
-<div onmouseover="changeTime12()" style="position: fixed; top:22px ;left: 44px;width: 22px;height:22px;border:1px solid #666" > 
+<div onmouseover="changeTime('c1x2','cA')" style="position: fixed; top:22px ;left: 44px;width: 22px;height:22px;border:1px solid #666" > 
     <p id="c1x2"></p> 
 </div>
-<div onmouseover="changeTime13()" style="position: fixed; top:22px ;left: 66px;width: 22px;height:22px;border:1px solid #666" > 
+<div onmouseover="changeTime('c1x3','c8')" style="position: fixed; top:22px ;left: 66px;width: 22px;height:22px;border:1px solid #666" > 
     <p id="c1x3"></p> 
 </div>
 
-<div onmouseover="changeTime20()" style="position: fixed; top:44px ;left: 0px;width: 22px;height:22px;border:1px solid #666" > 
+<div onmouseover="changeTime('c2x0','c9')" style="position: fixed; top:44px ;left: 0px;width: 22px;height:22px;border:1px solid #666" > 
     <p id="c2x0"></p> 
 </div>
-<div onmouseover="changeTime21()" style="position: fixed; top:44px ;left: 22px;width: 22px;height:22px;border:1px solid #666" > 
+<div onmouseover="changeTime('c2x1','cB')" style="position: fixed; top:44px ;left: 22px;width: 22px;height:22px;border:1px solid #666" > 
     <p id="c2x1"></p> 
 </div>
-<div onmouseover="changeTime22()" style="position: fixed; top:44px ;left: 44px;width: 22px;height:22px;border:1px solid #666" > 
+<div onmouseover="changeTime('c2x2','cF')" style="position: fixed; top:44px ;left: 44px;width: 22px;height:22px;border:1px solid #666" > 
     <p id="c2x2"></p> 
 </div>
-<div onmouseover="changeTime23()" style="position: fixed; top:44px ;left: 66px;width: 22px;height:22px;border:1px solid #666" > 
+<div onmouseover="changeTime('c2x3','cD')" style="position: fixed; top:44px ;left: 66px;width: 22px;height:22px;border:1px solid #666" > 
     <p id="c2x3"></p> 
 </div>
 
-<div onmouseover="changeTime30()" style="position: fixed; top:66px ;left: 0px;width: 22px;height:22px;border:1px solid #666" > 
+<div onmouseover="changeTime('c3x0','c7')"style="position: fixed; top:66px ;left: 0px;width: 22px;height:22px;border:1px solid #666" > 
     <p id="c3x0"></p> 
 </div>
-<div onmouseover="changeTime31()" style="position: fixed; top:66px ;left: 22px;width: 22px;height:22px;border:1px solid #666" > 
+<div onmouseover="changeTime('c3x1','c5')" style="position: fixed; top:66px ;left: 22px;width: 22px;height:22px;border:1px solid #666" > 
     <p id="c3x1"></p> 
 </div>
-<div onmouseover="changeTime32()" style="position: fixed; top:66px ;left: 44px;width: 22px;height:22px;border:1px solid #666" > 
+<div onmouseover="changeTime('c3x2','c3')" style="position: fixed; top:66px ;left: 44px;width: 22px;height:22px;border:1px solid #666" > 
     <p id="c3x2"></p> 
 </div>
-<div onmouseover="changeTime33()" style="position: fixed; top:66px ;left: 66px;width: 22px;height:22px;border:1px solid #666" > 
+<div onmouseover="changeTime('c3x3','c1')"style="position: fixed; top:66px ;left: 66px;width: 22px;height:22px;border:1px solid #666" > 
     <p id="c3x3"></p> 
 </div>
 </div>
