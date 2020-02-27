@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	
+	<title>Homepage</title>
+	<meta charset="utf-8" /> 
+	<style>   
+	
+	</style> 
+
+<script> 
+	var counter=0;
+	function changeTime(id, value){
+		var newImage = new Image(); 
+		newImage.src = value+"?" + counter;
+		document.getElementById(id).src=newImage.src; 
+		counter++; 
+	}
+</script>
+
+</head>
+<div onmouseover="changeTime('c0x0','c0')" style="position: fixed; top:0px ;left: 0px;width: 22px;height:22px;border:1px solid #666" > 
+		<p id="c0x0"></p>
+</div>
+<div onmouseover="changeTime('c0x1','c2')" style="position: fixed; top:0px; left:22px;width: 22px;height:22px;border:1px solid #666"> 
+		<p id="c0x1"></p>
+</div> 
+
+<div onmouseover="changeTime('c0x2','c4')" style="position:fixed;top:0px; left:44px; width: 22px; height:22px;border:1px solid #666"> 
+		<p id="c0x2"> </p>
+</div>
+
+<div onmouseover="changeTime('c0x3','c6')" style="position: fixed;top:0; left:66px; width: 22px;height:22px;border:1px solid #666"> 
+	<p id="c0x3"> </p>
+</div>
+
+<div onmouseover="changeTime('c1x0','cC')" style="position: fixed; top:22px ;left: 0px;width: 22px;height:22px;border:1px solid #666" > 
+    <p id="c1x0"></p> 
+</div>
+<div onmouseover="changeTime('c1x1','cE')" style="position: fixed; top:22px ;left: 22px;width: 22px;height:22px;border:1px solid #666" > 
+    <p id="c1x1"></p> 
+</div>
+<div onmouseover="changeTime('c1x2','cA')" style="position: fixed; top:22px ;left: 44px;width: 22px;height:22px;border:1px solid #666" > 
+    <p id="c1x2"></p> 
+</div>
+<div onmouseover="changeTime('c1x3','c8')" style="position: fixed; top:22px ;left: 66px;width: 22px;height:22px;border:1px solid #666" > 
+    <p id="c1x3"></p> 
+</div>
+
+<div onmouseover="changeTime('c2x0','c9')" style="position: fixed; top:44px ;left: 0px;width: 22px;height:22px;border:1px solid #666" > 
+    <p id="c2x0"></p> 
+</div>
+<div onmouseover="changeTime('c2x1','cB')" style="position: fixed; top:44px ;left: 22px;width: 22px;height:22px;border:1px solid #666" > 
+    <p id="c2x1"></p> 
+</div>
+<div onmouseover="changeTime('c2x2','cF')" style="position: fixed; top:44px ;left: 44px;width: 22px;height:22px;border:1px solid #666" > 
+    <p id="c2x2"></p> 
+</div>
+<div onmouseover="changeTime('c2x3','cD')" style="position: fixed; top:44px ;left: 66px;width: 22px;height:22px;border:1px solid #666" > 
+    <p id="c2x3"></p> 
+</div>
+
+<div onmouseover="changeTime('c3x0','c7')"style="position: fixed; top:66px ;left: 0px;width: 22px;height:22px;border:1px solid #666" > 
+    <p id="c3x0"></p> 
+</div>
+<div onmouseover="changeTime('c3x1','c5')" style="position: fixed; top:66px ;left: 22px;width: 22px;height:22px;border:1px solid #666" > 
+    <p id="c3x1"></p> 
+</div>
+<div onmouseover="changeTime('c3x2','c3')" style="position: fixed; top:66px ;left: 44px;width: 22px;height:22px;border:1px solid #666" > 
+    <p id="c3x2"></p> 
+</div>
+<div onmouseover="changeTime('c3x3','c1')"style="position: fixed; top:66px ;left: 66px;width: 22px;height:22px;border:1px solid #666" > 
+    <p id="c3x3"></p> 
+</div>
+</div>
+<body>  
+
+
+</body>
+</html>
