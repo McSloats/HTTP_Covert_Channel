@@ -1,6 +1,7 @@
 import pyshark 
 import os
 import binascii
+import sys
 capture = pyshark.LiveCapture(interface='lo', display_filter='http', only_summaries=False)
 message=[]
 count= 0
@@ -14,7 +15,8 @@ for packet in capture.sniff_continuously():
         mess=''.join(message)
         if(count==2):
             os.system("clear")
-            print(binascii.unhexlify(mess).decode()+" ", end = '')
+            newmess = binascii.unhexlify(mess).decode()
+            print(newmess)
             count = 0
     except:
         continue
